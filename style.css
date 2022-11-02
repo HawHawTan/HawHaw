@@ -239,6 +239,8 @@ ul {
 .project{
     display: flex;
     padding-top: 6em;
+    flex-direction: column;
+    justify-content: space-between;
     /* align-items: center; */
     position: relative;
     /* background-color :rgb(37, 47, 59); */
@@ -257,19 +259,30 @@ ul {
 .nextProject{
     position: absolute;
     /* background-color:Transparent;     */
-    text-align: center;
+    text-align: end;
     bottom: -2em;
     /* top: 2em; */
     right: 0;
     left: 0;
+}
+
+.nextProject i{
     animation: bounce-up 1.5s infinite ease-in-out;
 }
-.nextProject:hover{ 
+
+.nextProject i:hover{ 
     animation-play-state: paused;
 }
 .nextProject i{
     color: black;
     font-size: 1.5em;
+}
+
+footer{
+    text-align: center;
+    font-size: 15px;
+    block-size: 300;
+    padding-bottom: 20px;
 }
 
 
