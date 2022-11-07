@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/0b9937aaec.js" crossorigin="anonymous"></script>
@@ -15,18 +15,20 @@
 <body>
     <div class="container">
         <section id="top" class="intro">
-            <header>
-                <ul>
-                    <li><a href="#middle">About</a></li>
-                    <li><a href="#bottom">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </header>
-            <section class="content">
-                <h2> Haw Haw Tan</h2>
-                <h3>Front-End Developer</h3>
+                <div class="hidden">
+                <header>
+                    <ul>
+                        <li><a href="#middle">About</a></li>
+                        <li><a href="#bottom">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </header>
+                <div class="content">
+                    <h2> Haw Haw Tan</h2>
+                    <h3>Front-End Developer</h3>
+                </div>
+            </div>
             </section>
-        </section>
 
         <section id="middle" class="aboutMe">
             <div class="hidden">
@@ -103,10 +105,10 @@
                     corrupti,
                 </p>
             </div>
-            <div class="nextProject hidden">
+            <div class="arrow hidden">
                 <a href="#top"><i class="fa-solid fa-arrow-up"></i></a>
             </div>
-            <footer> © 2020 Haw Haw Tan Portfilo</footer>
+            <footer class="hidden"> © 2020 Haw Haw Tan Portfilo</footer>
         </section>
     </div>
 </body>
