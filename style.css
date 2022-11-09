@@ -72,21 +72,21 @@
 }
 
 html{
-
     scroll-behavior: smooth;
+    min-height: 100%;
 }
 
 /* @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap'); */
 /* @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap'); */
 /* @import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap'); */
 body{
-    /* position: fixed;  */
+    min-height: 100%;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     font-family: monospace;
-
-    /* variable */
+}
+:root{
     --load-intro-page: 600ms;
     --load-header-time: calc(800ms + var(--load-intro-page));
     --load-link-time-delay: calc(var(--load-header-time) + 50ms);
@@ -98,9 +98,6 @@ body{
     --content-h3-fontSize: 2em;
     --h2-footSize: 2.2rem;
     --p-footSize: 1.2rem;
-    /* --black: linear-gradient(90deg, #076499 0%, #80D0C7 100%); */
-
- 
 }
 
 /* .container{
@@ -215,7 +212,7 @@ ul {
 }
 
 .aboutMe div{
-    margin-top: 3rem;
+    margin-top: 2rem;
     color: #f3f3f2; 
 }
 .aboutMe div h2{
@@ -237,9 +234,6 @@ ul {
 .project div{
     padding-top: 3rem;
     font-size: var(--content-fontSize);
-    /* margin-bottom: 2rem; */
-    /* padding: 2rem 0; */
-    /* color: #f3f3f2; */
     color: black;
 } 
 .project div h2{
@@ -247,6 +241,7 @@ ul {
 } 
 .project div p{
     font-size: var(--p-footSize);
+
 } 
 
 .arrow{
@@ -294,6 +289,19 @@ footer{
     opacity: 1;
 }
 
+@media (max-width: 720px){
+     .aboutMe,.project{
+        padding: 0 3rem;
+    }
+    .aboutMe div p, .project div p{
+        font-size: 1rem;
+        padding-bottom:200px;
+        margin-bottom: 0;
+    } 
+}
+ 
+
+
 @media (max-width: 480px){
     ul a{
         padding: 0;
@@ -316,7 +324,8 @@ footer{
         font-size: 2rem;
     } 
     .aboutMe div p, .project div p{
-        font-size: 1rem;
+        font-size: 0.7rem;
+        margin-bottom: 0;
     } 
     
 }
