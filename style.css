@@ -93,11 +93,12 @@ body{
     
     --color: rgb(41, 41, 41);
     --hover-color:#ecf0f1;
-    --nav-footSize: 1rem;
+
+    --nav-fontSize: 1rem;
     --content-h2-fontSize: 4rem;
     --content-h3-fontSize: 2em;
-    --h2-footSize: 2.2rem;
-    --p-footSize: 1.2rem;
+    --h2-fontSize: 2.4rem;
+    --p-fontSize: 1.4rem;
 }
 
 /* .container{
@@ -140,36 +141,35 @@ body{
 /* make it pop */
 header{
     padding-top: 35px; 
-    /* position: fixed; */
     animation:load-header var(--load-intro-page) ease-in-out;
     transform: translateY(-100%);
     animation-fill-mode: forwards;
 }
 
-ul { 
+header ul{ 
     display: flex;
     justify-content: space-around;
     align-content: center; 
     padding: 0;
   }
 
- ul li { 
+header ul li{ 
     display: table-cell; 
     padding: 10px 0;
   }
 
- ul a {
+header ul a{
     color: var(--color);
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 0.15em;
     
-    font-size: var(--nav-footSize);
+    font-size: var(--nav-fontSize);
     display: inline-block;
     padding: 15px 20px;
     /* position: relative; */
   }
- ul a:after {    
+header ul a:after {    
     bottom: 0;
     content: "";
     display:block;
@@ -178,7 +178,7 @@ ul {
     transition: all 0.3s ease 0s;
     width: 0;
   }
- ul a:hover:after { 
+header ul a:hover:after { 
     width: 50%; 
   }
 
@@ -205,22 +205,59 @@ ul {
 }
 
 .aboutMe{
-    padding: 0 10rem;
+    padding: 0 20rem;
     display: flex;
     flex-direction: column;
     background-color :rgba(37,47,59,1);
+    padding-top: 2rem;
+    padding-bottom: 10rem;
 }
 
 .aboutMe div{
-    margin-top: 2rem;
     color: #f3f3f2; 
 }
-.aboutMe div h2{
-    font-size: var(--h2-footSize);  
+
+.aboutMe .cards{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-content: center;
+   gap: 20px;
 }
-.aboutMe div p{
-    font-size: var(--p-footSize); 
+
+.aboutMe div h2, .project div h2 {
+    font-size: var(--h2-fontSize);  
 }
+
+.aboutMe div p, .project div p {
+    font-size: var(--p-fontSize); 
+}
+
+.aboutMe div ul li{
+  font-size: 20px;
+   margin-top: 5px;
+}
+
+.aboutMe div ul{
+    position: absolute;
+    right: 1px;
+    padding-right: 50px;
+}
+
+.aboutMe .skillList{
+    border: 1px solid white;
+    transition: all .4s ease;
+    border-radius: 20px;
+    box-shadow: 20px 20px rgba(0,0,0,.15);
+    width: 40%;
+    height: 350px;
+    padding: 2rem 2rem;
+    position: relative;
+}
+/* 
+.aboutMe div:nth-of-type(2){
+    margin-top: 6rem;
+} */
 
 .project{
     flex-direction: column;
@@ -235,13 +272,6 @@ ul {
     padding-top: 3rem;
     font-size: var(--content-fontSize);
     color: black;
-} 
-.project div h2{
-    font-size: var(--h2-footSize);
-} 
-.project div p{
-    font-size: var(--p-footSize);
-
 } 
 
 .arrow{
@@ -269,7 +299,7 @@ footer{
     left: 0;
     bottom: 0px;
     text-align: center;
-    font-size: 15px;
+    font-size: 13px;
     block-size: 300;
     padding-bottom: 20px;
 }
@@ -289,18 +319,16 @@ footer{
     opacity: 1;
 }
 
-@media (max-width: 720px){
+/* @media (max-width: 720px){
      .aboutMe,.project{
         padding: 0 3rem;
     }
     .aboutMe div p, .project div p{
         font-size: 1rem;
-        padding-bottom:200px;
         margin-bottom: 0;
     } 
-}
+} */
  
-
 
 @media (max-width: 480px){
     ul a{
@@ -309,7 +337,7 @@ footer{
     }
 
     .content h2{
-        font-size: 2.7rem;
+        font-size: 2.5rem;
     }
 
     .content h3{
@@ -318,91 +346,35 @@ footer{
 
     .aboutMe,.project{
         padding: 0 3rem;
+        padding-bottom: 3rem;
     }
 
     .aboutMe div h2, .project div h2{
-        font-size: 2rem;
+        font-size: 1.8rem;
     } 
     .aboutMe div p, .project div p{
-        font-size: 0.7rem;
+        font-size: 1rem;
         margin-bottom: 0;
     } 
+
+    .aboutMe div ul{
+       padding-top: 2rem;
+       right: unset;
+    }
+
+    .aboutMe .skillList{ 
+        width: 80%;
+        height: 350px;
+    }
+
+    .aboutMe .cards{
+        flex-direction: column;
+        align-items: center;
+     }
+
+     .arrow{
+       bottom: 4rem;
+    }
     
 }
-
-
-/* mobile hamburger */
-.mobile{
-    display: none;
-    /* align-items: center; */
-}
-
-.hamburger{
-    z-index: 1;
-    cursor: pointer;
-}
-
-.hamburger div{
-    position: relative;
-    width: 35px;
-    height: 3px;
-    background-color: #ecfbff;
-    margin-top: 10px;
-    transition: all .5s ease-in-out;
-}
-
-#toggle{
-    display: none;
-}
-
-#toggle:checked + .hamburger .hamburger_top{
-    transform: rotate(-45deg);
-     margin-top: 17.5px; /*half the size of humburger height */
-}
-
-#toggle:checked + .hamburger .hamburger_meat{
-    transform: rotate(45deg);
-    margin-top: -3px; /*negative value of hamburger div height */
-}
-#toggle:checked + .hamburger .hamburger_bottom{
-    transform: scale(0);
-}
-
-#toggle:checked + .hamburger + .hamburger_nav{
-    right: 0;
-    /* transform:scale(1); */
-    
-}
-
-.hamburger_nav{
-    position: absolute;
-    opacity: 0.8;
-    width: 100%; 
-    height: 80%;
-    right: 100%;
-    /* transform:scale(0); */
-    transition: all 1s ease-in-out;
-}
-
-.hamburger_nav--items{
-    display: flex;
-    justify-content: space-evenly;
-}
-
-/* use tranlate x */
-.hamburger_nav--items a{
-    z-index: 2;
-    color: var(--color);
-    /* font-family: monospace; */
-    font-size: 1.5em;
-    text-decoration: none;
-    letter-spacing: 3px;
-    transition: all 0.4s ease-in-out;
-}
-
-.hamburger_nav--items a:hover{
-    filter:drop-shadow(20px 15px 5px rgba(37,47,59,1));
-}
-
-
 
