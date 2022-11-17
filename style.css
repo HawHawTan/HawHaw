@@ -329,20 +329,146 @@ footer{
         margin-bottom: 0;
     } 
 } */
+
+
+#overlay{
+    position: fixed; 
+    display: flex; 
+    width: 100%; 
+    height: 100%; 
+    right: 0;
+    bottom: 0;
+    background-color:rgb(37, 47, 59,0.7);
+    opacity: 0;
+    z-index: -1; 
+    transition: all 0.6s ease-in-out;
+    /* z-index: unset; */
+
+    /* animation: pop-contact 1s ease-in-out;
+    transform: scale(0);
+    animation-fill-mode: forwards; */
+   
+}
+
+.overlay_info{
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: row;
+    margin: auto;
+    width: 750px;
+    height: 500px;
+    border-radius: 50px;
+    background: linear-gradient(360deg, #EFEDDB -138%, rgba(37,47,59,0.7)101%);
+}
+
+img{
+    margin: auto;
+    width: 240px;
+    height: 250px;
+    border-radius: 50px;
+}
+
+.overlay_info #xMark{
+    position: absolute;
+    right: 40px;
+    top: 35px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.overlay_info .info{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    font-size: 20px;
+    padding-right: 4rem;
+}
+.overlay_info .info p:nth-child(1){
+    font-size: 33px;
+    font-weight: 900;
+    margin: 0;  
+}
+
+.overlay_info .icon{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    font-size: 25px;
+}
+
+.overlay_info .icon i{
+    /* padding-right: 4rem; */
+    color: black;
+}
+
+.overlay_info i:hover{
+    /* padding: 2rem ; */
+    color: white;
+}
+
  
 
 @media (max-width: 480px){
-    ul a{
+    .intro{
+        padding: 0 2rem;
+    }
+
+    ul li a{
         padding: 0;
-        font-size: 12px;
+        font-size: 16px;
+    }
+    .content{
+        text-align: left;
     }
 
     .content h2{
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     .content h3{
         font-size: 1.2rem;
+    }
+    
+    .overlay_info{
+        width: 350px;
+        height: 450px;;
+        flex-direction: column;
+    }
+
+    img{
+        margin: auto;
+        width: 200px;
+        height: 200px;
+        border-radius: 50px;
+    }
+
+    .overlay_info #xMark{  
+        right: 1em;
+        top: 1em;
+    }
+
+    .overlay_info .info{
+        font-size: 15px;
+        width: 80%;
+        padding-right: 0;
+        padding-bottom: 3em;
+        text-align: center;
+    }
+
+    .overlay_info .info p:nth-child(1){
+        font-size: 27px;
+    }
+
+    .overlay_info .icon{
+        display: flex;
+        justify-content: space-around;
+        padding-top: 0;
+
+    }
+    
+    .overlay_info .icon i{
+        padding-right: 0;
     }
 
     .aboutMe,.project{
@@ -380,39 +506,8 @@ footer{
 }
 
 
-#overlay{
-    position: fixed; 
-    display: flex; 
-    width: 100%; 
-    height: 100%; 
-    right: 0;
-    bottom: 0;
-    background-color:rgb(37, 47, 59);
-    opacity: 0;
-    z-index: -1; 
-    transition: all 0.6s ease-in-out;
-    /* z-index: unset; */
-
-    /* animation: pop-contact 1s ease-in-out;
-    transform: scale(0);
-    animation-fill-mode: forwards; */
-    cursor: pointer;
-}
 
 
-/* .overlay_info{
-    animation: reverse-pop-contact 1s ease-in-out;
-    transform: scale(0);
-    animation-fill-mode: forwards;
-} */
-
-
-.overlay_info{
-    margin: auto;
-    width: 900px;
-    height: 500px;
-    background-color:green;
-}
 
 
 
