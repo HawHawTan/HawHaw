@@ -41,7 +41,7 @@
 
 @keyframes load-content{
     0% {
-        transform:translateX(20%);
+        transform:translateX(50%);
         opacity: 0;
         /* transform: scale(0%); */
     }
@@ -87,7 +87,6 @@ html{
     scroll-behavior: smooth;
     height: 100vh;
     margin: 0;
-    z-index: 1;
 }
 
 /* @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap'); */
@@ -140,9 +139,8 @@ body{
 
 /* make it pop */
 header{
-    height: 100%;
     padding-top: 35px; 
-    animation:load-header var(--load-intro-page) ease-in-out;
+    animation:load-header 1s ease-in;
     transform: translateY(-100%);
     animation-fill-mode: forwards;
 }
@@ -185,10 +183,10 @@ header ul a:hover:after {
 
 .content{   
    margin-top: 220px;
-   /* animation: load-content 500ms ease-in var(--load-link-time-delay);
+   animation: load-content 500ms ease-in var(--load-link-time-delay);
    opacity: 0;
-   transform:translateX(20%);
-   animation-fill-mode: forwards; */
+   transform:translateX(50%);
+   animation-fill-mode: forwards;
 }
 
 .content h2{
@@ -206,16 +204,22 @@ header ul a:hover:after {
 }
 
 .aboutMe{
-    padding: 0 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color :rgba(37,47,59,1); 
+}
+
+.container-2{
+    /* padding: 0 20rem; */
     display: flex;
     flex-direction: column;
-    background-color :rgba(37,47,59,1);
-    padding-top: 2rem;
-    padding-bottom: 10rem;
+    width: 50%;
 }
 
 .aboutMe div{
-    color: #f3f3f2; 
+    color: #f3f3f2;
+    padding-bottom: 1rem; 
 }
 
 .aboutMe .cards{
@@ -398,12 +402,10 @@ img{
 }
 
 .overlay_info .icon i{
-    /* padding-right: 4rem; */
     color: black;
 }
 
 .overlay_info i:hover{
-    /* padding: 2rem ; */
     color: white;
 }
 
@@ -444,8 +446,8 @@ img{
     }
 
     .overlay_info #xMark{  
-        right: 1em;
-        top: 1em;
+        right: 27px;
+        top: 21px;
     }
 
     .overlay_info .info{

@@ -22,11 +22,4 @@ function on() {
  function off() {
    document.getElementById("overlay").style.opacity = "0";
    document.getElementById("overlay").style.zIndex = "-1";
-   // document.getElementById("overlay").style.zIndex = "none";
-   // document.getElementById("overlay").style.zIndex = "unset";
-   // document.getElementById("overlay").style.left = "100%";
-   // document.getElementById("overlay").style.bottom = "100%";
-   // document.getElementById("overlay").style.animation = "reverse-pop-contact 1s ease-in-out";
-   // document.getElementById("overlay").style.transform = "scale(0)";
-
  }
