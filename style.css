@@ -210,8 +210,7 @@ header ul a:hover:after {
     background-color :rgba(37,47,59,1); 
 }
 
-.container-2{
-    /* padding: 0 20rem; */
+.container-info{
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -226,7 +225,7 @@ header ul a:hover:after {
    display: flex;
    flex-direction: row;
    justify-content: space-around;
-   align-content: center;
+   align-items: center;
    gap: 20px;
 }
 
@@ -245,7 +244,7 @@ header ul a:hover:after {
 
 .aboutMe div ul{
     position: absolute;
-    right: 8rem;
+    right: -15px;
     padding-right: 50px;
 }
 
@@ -265,19 +264,38 @@ header ul a:hover:after {
 } */
 
 .project{
+    display: flex;
     flex-direction: column;
-    justify-content: space-between;
     position: relative;
-    padding: 0 10rem;
-    /* background-color :rgb(37, 47, 59); */
+    align-items:center ;
     background: linear-gradient(0deg, #efede1, rgb(37, 47, 59) 99%);
 }
 
 .project div{
-    padding-top: 3rem;
+    padding-top: 1rem;
     font-size: var(--content-fontSize);
     color: black;
+    width: 80%;
 } 
+
+.project .cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+} 
+
+.project .skillList{
+    border: 1px solid black;
+    transition: all .4s ease;
+    border-radius: 20px;
+    box-shadow: 20px 20px rgba(0,0,0,.15);
+    width: 50%;
+    height: 350px;
+    padding: 2rem 2rem;
+    position: relative;
+}
 
 .arrow{
     position: absolute;
@@ -474,8 +492,11 @@ img{
     }
 
     .aboutMe,.project{
-        padding: 0 3rem;
         padding-bottom: 3rem;
+    }
+
+    .container-info{
+        width: 80%;
     }
 
     .aboutMe div h2, .project div h2{
@@ -499,6 +520,24 @@ img{
     .aboutMe .cards{
         flex-direction: column;
         align-items: center;
+     }
+
+     .project div h2
+    {
+        padding-left: 2rem;
+    }
+
+     .project div{
+        width: 100%;
+    } 
+
+     .project .cards{
+        flex-direction: column;
+     }
+
+     .project .skillList
+     {
+        width: 60%;
      }
 
      .arrow{
