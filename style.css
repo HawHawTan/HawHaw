@@ -213,7 +213,7 @@ header ul a:hover:after {
 .container-info{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 60%;
 }
 
 .aboutMe div{
@@ -244,7 +244,7 @@ header ul a:hover:after {
 
 .aboutMe div ul{
     position: absolute;
-    right: -15px;
+    right: 2em;
     padding-right: 50px;
 }
 
@@ -427,9 +427,27 @@ img{
     color: white;
 }
 
+/* (1024 < width < 1200) */
+
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .container-info {    
+        width: 70%;
+    }
+
+    .aboutMe .skillList {
+        height: 500px;
+    }
+    
+    .aboutMe div ul {
+        bottom: 7cem;
+    }
+    
+    
+}
  
 
-@media (max-width: 480px){
+@media (min-width: 480px) and (max-width: 769px){
     .intro{
         padding: 0 2rem;
     }
@@ -496,7 +514,7 @@ img{
     }
 
     .container-info{
-        width: 80%;
+        width: 60%;
     }
 
     .aboutMe div h2, .project div h2{
@@ -509,7 +527,7 @@ img{
 
     .aboutMe div ul{
        padding-top: 2rem;
-       right: unset;
+       /* right: unset; */
     }
 
     .aboutMe .skillList{ 
