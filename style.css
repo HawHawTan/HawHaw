@@ -258,12 +258,18 @@ img{
 
 
 .content{   
+  
    margin-top: 220px;
-   animation: load-content 500ms ease-in var(--load-link-time-delay);
-   opacity: 0;
+   /*opacity: 0;
+    animation: load-content 500ms ease-in var(--load-link-time-delay);
    transform:translateX(50%);
-   animation-fill-mode: forwards;
+   animation-fill-mode: forwards; */
 }
+
+.content h2,.content h3
+{
+    text-shadow: 11px 14px 5px rgb(0 0 0 / 15%);
+} 
 
 .content h2{
     color:var(--color);
@@ -370,7 +376,6 @@ img{
     margin: 0;
     position: relative;
     width: 400px;
-  
     box-shadow: 20px 20px rgba(0,0,0,.15);
     z-index: 1; 
     cursor: pointer;
@@ -393,43 +398,35 @@ img{
 .knowOrDont-details{
     position: absolute;
     width: 25%;
-    margin-left: 2em;
     border: 1px solid black;
     box-shadow: 20px 20px rgb(0 0 0 / 15%);
     padding: 2rem 2rem;
     border-radius: 20px;
 
-    
     opacity: 0;
     z-index: -1;
     transform: translateY(-10%);
     transition: all 1s ease-in-out;
-
-    /* transform: translateY(-100%); */
 }
 
 .move-down{
     position: relative;
-
     transform: translateY(30%);
     opacity: 1;
     transition: all 1s ease-in-out;
-    /* animation: pull-down 1s ease-in-out forwards; */
-    /* z-index: 1; */
-  
 }
 
 
-.project .skillList{
-    /* border: 1px solid black;
+ /*.project .skillList{
+    border: 1px solid black;
     transition: all .4s ease;
     border-radius: 20px;
     box-shadow: 20px 20px rgba(0,0,0,.15);
     width: 50%;
     height: 350px;
     padding: 2rem 2rem;
-    position: relative; */
-}
+    position: relative;
+} */
 
 .arrow{
     position: absolute;
@@ -503,6 +500,11 @@ footer{
     .aboutMe div ul {
         bottom: 7em;
     } 
+
+    .knowOrDont-details,.move-down{
+        margin-top: 3em;
+        width: 80%;
+    }
 }
  
 
@@ -515,12 +517,9 @@ footer{
         padding: 0;
         font-size: 16px;
     }
-    .content{
-        text-align: left;
-    }
 
     .content h2{
-        font-size: 3rem;
+        font-size: 4em;
     }
 
     .content h3{
@@ -579,7 +578,7 @@ footer{
     .aboutMe div h2, .project div h2{
         font-size: 1.8rem;
     } 
-    .aboutMe div p, .project div p{
+    .aboutMe div p{
         font-size: 1rem;
         margin-bottom: 0;
     } 
@@ -599,23 +598,10 @@ footer{
         align-items: center;
      }
 
-     .project div h2
-    {
-        padding-left: 2rem;
+     .knowOrDont-details,.move-down{
+        width: 80%;
     }
 
-     .project div{
-        width: 100%;
-    } 
-
-     .project .cards{
-        flex-direction: column;
-     }
-
-     .project .skillList
-     {
-        width: 60%;
-     }
 
      .arrow{
        bottom: 4rem;
