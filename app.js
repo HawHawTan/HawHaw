@@ -13,8 +13,6 @@ const hidden = document.querySelectorAll('.hidden');
 hidden.forEach((el) => observer.observe(el));
 
 function on() {
-   // document.getElementById("overlay").style.left = "0";
-   // document.getElementById("overlay").style.bottom = "0";
    document.getElementById("overlay").style.opacity = "1";
    document.getElementById("overlay").style.zIndex = "1";
  }
@@ -23,3 +21,13 @@ function on() {
    document.getElementById("overlay").style.opacity = "0";
    document.getElementById("overlay").style.zIndex = "-1";
  }
+
+ document.get
+
+
+ function knowOrDont_on() {
+    document.getElementById("knowOrDont-details").classList.toggle("move-down");
+    document.getElementById("knowOrDont").classList.toggle("shrink-img");
+    // document.getElementById("overlay").style.zIndex = "1";
+ }
+ 
