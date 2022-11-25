@@ -257,13 +257,12 @@ img{
 }
 
 
-.content{   
-  
+.content{ 
    margin-top: 220px;
-   /*opacity: 0;
-    animation: load-content 500ms ease-in var(--load-link-time-delay);
+   opacity: 0;
+   animation: load-content 500ms ease-in var(--load-link-time-delay);
    transform:translateX(50%);
-   animation-fill-mode: forwards; */
+   animation-fill-mode: forwards;
 }
 
 .content h2,.content h3
@@ -353,9 +352,9 @@ img{
     background: linear-gradient(0deg, #efede1, rgb(37, 47, 59) 99%);
 }
 
-.project .container-info{
+/* .project .container-info{
     width: 75%;
-}
+} */
 
 
 .project .cards{
@@ -407,6 +406,14 @@ img{
     z-index: -1;
     transform: translateY(-10%);
     transition: all 1s ease-in-out;
+}
+.knowOrDont-details .working{
+    padding-top: 1em;
+    display: block;
+}
+
+.knowOrDont-details span{
+    color: green;
 }
 
 .move-down{
@@ -519,7 +526,7 @@ footer{
     }
 
     .content h2{
-        font-size: 4em;
+        font-size: 3em;
     }
 
     .content h3{
@@ -572,7 +579,7 @@ footer{
     }
 
     .container-info{
-        width: 60%;
+        width: 80%;
     }
 
     .aboutMe div h2, .project div h2{
@@ -598,10 +605,20 @@ footer{
         align-items: center;
      }
 
+     .project{
+        padding-top: 3em;
+     }
+     .project1{
+        justify-content: center;
+     }
+
+     .knowOrDont{
+        width: 100%;
+     }
+
      .knowOrDont-details,.move-down{
         width: 80%;
     }
-
 
      .arrow{
        bottom: 4rem;

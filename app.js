@@ -1,3 +1,5 @@
+"use strict"
+
 const observer = new IntersectionObserver((lists) =>{
     lists.forEach((list) => {
      console.log(list);
