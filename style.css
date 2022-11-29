@@ -294,39 +294,39 @@ img{
 }
 
 .bouncing-text div:nth-child(2) {
-    animation: bouncing 1.5s ease infinite .1s;
+    animation: bouncing 1.5s ease-in-out infinite .1s;
 }
 
 .bouncing-text div:nth-child(3) {
   
-    animation: bouncing 1.5s ease infinite .2s;
+    animation: bouncing 1.5s ease-in-out infinite .2s;
 }
 
 .bouncing-text div:nth-child(4) {
     text-indent: 20px;
-    animation: bouncing 1.5s ease infinite .3s;
+    animation: bouncing 1.5s ease-in-out infinite .3s;
 }
 
 .bouncing-text div:nth-child(5){
-    animation: bouncing 1.5s ease infinite .4s;
+    animation: bouncing 1.5s ease-in-out infinite .4s;
 }
 
 .bouncing-text div:nth-child(6){
-    animation: bouncing 1.5s ease infinite .5s;
+    animation: bouncing 1.5s ease-in-out infinite .5s;
 }
 
 .bouncing-text div:nth-child(7){
     text-indent: 20px;
-    animation: bouncing 1.5s ease infinite .6s;
+    animation: bouncing 1.5s ease-in-out infinite .6s;
 }
 
 .bouncing-text div:nth-child(8){
 
-    animation: bouncing 1.5s ease infinite .7s;
+    animation: bouncing 1.5s ease-in-out infinite .7s;
 }
 
 .bouncing-text div:nth-child(9){
-    animation: bouncing 1.5s ease infinite .8s;
+    animation: bouncing 1.5s ease-in-out infinite .8s;
 }
     
 
@@ -693,7 +693,7 @@ footer{
          left: 0;
 
     }
-    37
+
      .knowOrDont-details,.move-down{
         width: 80%;
     }
@@ -703,6 +703,9 @@ footer{
     } 
 }
 
+@media (min-width:  ){
+
+}
 
 
 
