@@ -586,7 +586,7 @@ footer{
     }
 
     .content div{
-        font-size: 45px;
+        font-size: 2em;
     }
 
     .content h3{
@@ -617,7 +617,7 @@ footer{
 
     .overlay_info .info{
         font-size: 15px;
-        width: 90%;
+        width: 80%;
         padding-right: 0;
         padding-bottom: 3em;
         text-align: center;
@@ -645,11 +645,13 @@ footer{
     }
 
     .aboutMe,.project{
-        padding-bottom: 3rem;
+        margin: 0;
+        padding: 2rem 0;
     }
 
     .container-info{
         width: 80%;
+        padding-top: 4em;
     }
 
     .aboutMe div h2, .project div h2{
@@ -675,9 +677,7 @@ footer{
         align-items: center;
      }
 
-     .project{
-        padding-top: 3em;
-     }
+
      .project1{
         justify-content: center;
      }
