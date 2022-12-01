@@ -363,7 +363,7 @@ img{
 
 .aboutMe div{
     color: #f3f3f2;
-    padding-bottom: 1rem; 
+    padding: 1rem; 
 }
 
 .aboutMe .cards{
@@ -585,17 +585,17 @@ footer{
         font-size: 16px;
     }
 
-    .content h2{
-        font-size: 3em;
+    .content div{
+        font-size: 45px;
     }
 
     .content h3{
-        font-size: 1.2rem;
+        font-size: 1.2em;
     }
     
     .overlay_info{
         width: 350px;
-        height: 450px;;
+        height: 470px;;
         flex-direction: column;
     }
     .haw_pic{
@@ -617,7 +617,7 @@ footer{
 
     .overlay_info .info{
         font-size: 15px;
-        width: 80%;
+        width: 90%;
         padding-right: 0;
         padding-bottom: 3em;
         text-align: center;
@@ -629,8 +629,8 @@ footer{
     }
 
     .overlay_info .icon{
-        display: flex;
-        justify-content: space-around;
+        /* display: flex;
+        justify-content: space-around; */
         padding-top: 0.4em;
         align-items: flex-start;
     }
