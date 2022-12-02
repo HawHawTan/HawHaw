@@ -578,6 +578,7 @@ footer{
 @media (min-width: 320px) and (max-width: 769px){
     .intro{
         padding: 0 2rem;
+        margin-bottom: 0;
     }
 
     ul li a{
@@ -649,8 +650,7 @@ footer{
     }
 
     .container-info{
-        margin: 0;
-        width: 80%;
+        margin: 0;   width: 80%;
         padding-top: 4em;
     }
 
