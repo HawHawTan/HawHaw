@@ -17,29 +17,28 @@
         <section id="top" class="intro">
                 <header>
                     <div class="mobile">
-                        <input id="toggle" type="checkbox" />
+                        <input id="toggle" type="checkbox"/>
                         <label class="hamburger" for="toggle">
                             <div class="hamburger_top"></div>
                             <div class="hamburger_meat"></div>
                             <div class="hamburger_bottom"></div>
                         </label>
-    
                         <div class="hamburger_nav">
                             <nav class="hamburger_nav--items">
-                                <a href="#">Home</a>
-                                <a href="#">About</a>
-                                <a href="#">Project</a>
+                                <a href="#aboutMe">About</a>
+                                <a href="#portfolio">Project</a>
+                                <a href="#contact" onclick="on()">Contact</a>
                             </nav>
                         </div>
-                    </div>
-                    <!-- <ul>
-                        <li><a href="#aboutMe">About</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#overlay" onclick="on()" >Contact</a></li>
-                    </ul> -->
+                    </div> 
                 </header>
-
-                <div id="overlay" >
+               
+                <!-- <ul>
+                    <li><a href="#aboutMe">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#overlay" onclick="on()" >Contact</a></li>
+                </ul> -->
+                <div id="contact" >
                     <div class="overlay_info">
                        <img class="haw_pic" src="hawPic.jpg" alt="HawHaw">
                        <i id="xMark" class="fa-solid fa-xmark" onclick="off()"></i>
@@ -54,7 +53,7 @@
                         </div>    
                     </div>          
                 </div>
-                    <div class="content">
+                    <div id="content" class="content">
                         <!-- <h2> Haw Haw Tan</h2> -->
                          <div class="bouncing-text">
                             <div>H</div>
@@ -67,7 +66,14 @@
                             <div>a</div>
                             <div>n</div>
                         </div>
-                        <h3>Front-End Developer</h3>
+
+                        <div class="names">
+                            <div class="verticalFlip">
+                                <span>React Native Developer</span>
+                                <span>Front-End Developer</span> 
+                            </div>
+                        </div>
+                        
                     </div>
             </section>
 
