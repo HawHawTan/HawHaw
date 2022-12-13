@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="hawPic.jpg">
+    <link rel="icon" href="images/hawPic.jpg">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/0b9937aaec.js" crossorigin="anonymous"></script>
     <script defer src="app.js"></script>
@@ -25,8 +25,8 @@
                         </label>
                         <div class="hamburger_nav">
                             <nav class="hamburger_nav--items">
-                                <a href="#aboutMe">About</a>
-                                <a href="#portfolio">Project</a>
+                                <a href="#aboutMe" onclick="closeHamburger()">About</a>
+                                <a href="#portfolio" onclick="closeHamburger()">Project</a>
                                 <a href="#contact" onclick="on()">Contact</a>
                             </nav>
                         </div>
@@ -40,11 +40,11 @@
                 </ul> -->
                 <div id="contact" >
                     <div class="overlay_info">
-                       <img class="haw_pic" src="hawPic.jpg" alt="HawHaw">
+                       <img class="haw_pic" src="images/hawPic.jpg" alt="HawHaw">
                        <i id="xMark" class="fa-solid fa-xmark" onclick="off()"></i>
                        <div class="info">
                             <p>Haw Haw Tan</p>
-                            <p>Feel free to contact me in any of the following ways</p>
+                            <p>Feel free to contact me!</p>
                             <div class="icon">
                                 <a href="mailto:thawhaw@gmail.com"><i class="fa-regular fa-envelope">:</i> thawhaw@gmail.com</a>
                                 <a href="https://www.linkedin.com/in/hawhawtan/"><i class="fa-brands fa-linkedin-in">:</i> www.linkedin.com/in/hawhawtan</a>
@@ -125,17 +125,17 @@
         <section id="portfolio" class="project">
             <div class="container-info">
                 <div class="hidden">
-                    <h2>Portfilo</h2>
+                    <h2>Project</h2>
                     <div class="cards">
                         <div class="project1" onclick="knowOrDont_on()">
-                           <img id="knowOrDont" class="knowOrDont" src="Know-or-Don't logo.jpg" alt="Know-or-Don't logo">
+                           <img id="knowOrDont" class="knowOrDont" src="images/Know-or-Don't logo.jpg" alt="Know-or-Don't logo">
                            <!-- <button class="details"> details</button> -->
                             <p class="knowOrDont-details" id="knowOrDont-details" >
                                 <!-- <img id="knowOrDont" class="shrink-img" src="Know-or-Don't logo.jpg" alt="Know-or-Don't logo"> -->
                                 Know-or-Don’t is a concept of a note cards for students who want to study on the go. 
                                 It has a simple and minimalistic look that keep you focus on the heading. 
                                 It will prompt a question If you know or don’t to the topic. If you don't know, it'll come back and ask again.
-                               <span class="working">Currently working on it...</span>
+                               <span class="working">Work in process...</span>
                             </p>
                         </div>
                     </div>

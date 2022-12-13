@@ -7,17 +7,16 @@
     100%{
         transform: translateY(0);
         opacity: 1;
-      
     }
 }
 
 @keyframes pop-contact{
     0% {
-        transform: scale(0);
+        transform: scale(0.4);
     }
 
-    70%{
-        transform: scale(1.5);
+    50%{
+        transform: scale(1.2);
     }
 
     100%{
@@ -110,26 +109,17 @@
     }
   }
 
-@keyframes verticalFilp{
-    0% {
-        opacity: 0;
-        transform: rotateX(90def);
-    }
-    50% {
-        opacity: 1;
-        transform: rotateX(180deg);
-    }
-    100% {
-        opacity: 0;
-    }
-  }
 
   @keyframes spin_words{
-    10%{
-        transform: translateY(-60%);
+    0%{
+        transform: rotateX(0);
     }
-    45%{
-        transform: translateY(-100%);
+
+    50%{
+        transform: rotateX(180deg);
+    }
+    100%{
+        transform: rotateX(0);
     }
 }
 
@@ -284,10 +274,8 @@ header{
     background-color:rgb(37, 47, 59,0.7);
     opacity: 0;
     z-index: -1; 
-    transition: all 1.5s ease-in-out;
-
-    animation: pop-contact 5s ease-in-out forwards;
-    transform: scale(0);
+    animation: pop-contact 2s ease-in-out forwards;
+    transform: scale(0.4);
 }
 
 .overlay_info{
@@ -354,16 +342,15 @@ img{
 }
 
 .overlay_info i:hover, .overlay_info .icon a:hover{
-    color: white;
+    color: var(--color-white) ;
 }
-
 
 .content{ 
    position: absolute;
    margin-top: 220px;
    animation: zoom-in-zoom-out 500ms ease-in var(--load-link-time-delay);
    opacity: 0;
-   transform: scale(1, 1);
+   transform: scale(1);
    animation-fill-mode: forwards;
 }
 
@@ -423,22 +410,44 @@ img{
 }
 
 .names{  
-    display: flex;
+    /* display: flex; */
     color:var(--color);
     text-transform: uppercase;
     font-size: var(--content-h3-fontSize);
     height: 40px;
+    position: relative;
+    perspective: 1000px;
+    /* border: 1px solid; */
 }
 
 .verticalFlip{
-   overflow: hidden;
+    animation: spin_words 3s infinite forwards;
+    transition: all ease-in-out;
+}
+
+.verticalFlip{
+   /* overflow: hidden; */
+   position: relative;
+   width: 100%;
+   height: 100%;
+   text-align: center;
+   transition: transform 0.8s;
+   transform-style: preserve-3d;
 }
 
 .verticalFlip span{
-    display: block; 
-    margin-right: 12px ;
+    position: absolute;
+    left: 0;
+    backface-visibility: hidden;
     font-size: 2rem;
-    animation: spin_words 7s infinite;
+}
+
+.verticalFlip span:nth-child(1), .verticalFlip span:nth-child(2){
+    color: var(--color-white);
+}
+
+.verticalFlip span:nth-child(2){
+    transform: rotateX(180deg);
 }
 
 .aboutMe{
@@ -510,7 +519,6 @@ img{
     background: linear-gradient(0deg, #efede1, rgb(37, 47, 59) 99%);
 }
 
-
 .project1{
     display: flex;
     flex-direction: row;
@@ -531,7 +539,6 @@ img{
     transform: translateY(9px);
     transition: all 0.5s ease-in-out ;
 }
-
 
 .shrink-img{
     position: absolute;
@@ -561,7 +568,7 @@ img{
 }
 
 .knowOrDont-details span{
-    color: #5cbf5c;
+    color: #1d891d;
 }
 
 .move-down{
@@ -601,8 +608,7 @@ footer{
     padding-bottom: 20px;
 }
 
-
-/* animation for about me for now */
+/* animation when scrolling*/
 .hidden{
     transform: translateX(-100%);
     filter: blur(5px);
@@ -624,7 +630,6 @@ footer{
         /* background-color: white; */
     }
  
-
      .aboutMe .cards{
         flex-direction: column;
         align-items: center;
@@ -787,7 +792,7 @@ footer{
     }
 
     .skillList .list div{
-        font-size: 1em; 
+        font-size: 1.1em; 
         padding-bottom: 1.5em;
      }
 
@@ -797,7 +802,6 @@ footer{
 
     .knowOrDont{
         width: 100%;
-        /* transition: all 1s ease-in-out; */
      }
 
     .shrink-img{

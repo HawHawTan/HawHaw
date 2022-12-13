@@ -14,19 +14,28 @@ const observer = new IntersectionObserver((lists) =>{
 const hidden = document.querySelectorAll('.hidden');
 hidden.forEach((el) => observer.observe(el));
 
-function changeName(){
-   let name = ["Front-end", "React Native"];
+function closeHamburger(){
+   document.getElementById("toggle").checked = false;
 }
 
 function on() {
-   document.getElementById("contact").style.opacity = "1";
-   document.getElementById("contact").style.zIndex = "1";
+   let contact = document.getElementById("contact")
    document.getElementById("toggle").checked = false;
+   contact.style.opacity = "1";
+   contact.style.zIndex = "1";
+
+   contact.style.animation = 'none';
+   contact.offsetHeight; /* trigger reflow */
+   contact.style.animation = null; 
  }
  
  function off() {
-   document.getElementById("contact").style.opacity = "0";
-   document.getElementById("contact").style.zIndex = "-1";
+   let contact = document.getElementById("contact");
+   contact.style.transition = "all 1s ease-in-out";
+   contact.style.opacity = "0";
+   contact.style.zIndex = "-1";
+ 
+
  }
 
  function knowOrDont_on() {
