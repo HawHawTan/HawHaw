@@ -299,7 +299,9 @@ header img{
     width: 750px;
     height: 500px;
     border-radius: 50px;
-    background: linear-gradient(360deg, #EFEDDB -138%, rgba(37,47,59,0.7)101%);
+    /* background-color:rgb(37, 47, 59,0.7); */
+    background-color:rgb(37, 47, 59,0.9); 
+    /* background: linear-gradient(360deg, #EFEDDB -138%, rgba(37,47,59,0.7)101%); */
 }
 
 img{
@@ -323,7 +325,10 @@ img{
     width: 50%;
     font-size: 20px;
     padding-right: 4rem;
+    color: var(--color-white);
 }
+
+
 .overlay_info .info p:nth-child(1){
     font-size: 33px;
     font-weight: 900;
@@ -340,7 +345,7 @@ img{
 
 .overlay_info .icon i{
     font-size: 22px;
-    color: black;
+    color: var(--color-white);
     transition: all 0.5s ease-in-out;
 }
 
@@ -349,12 +354,12 @@ img{
     padding-bottom: 15px;
     text-decoration: none;
     font-size: 20px;
-    color: black;
+    color: var(--color-white);
     transition: all 0.5s ease-in-out;  
 }
 
 .overlay_info i:hover, .overlay_info .icon a:hover{
-    color: var(--color-white) ;
+    color: var(--color-blue) ;
 }
 
 .content{ 
