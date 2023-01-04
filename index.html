@@ -14,66 +14,48 @@
 
 <body>
     <div class="container">
-        <section id="top" class="intro">
-                <header>
-                    <div class="mobile">
-                        <input id="toggle" type="checkbox"/>
-                        <label class="hamburger" for="toggle">
-                            <div class="hamburger_top"></div>
-                            <div class="hamburger_meat"></div>
-                            <div class="hamburger_bottom"></div>
-                        </label>
-                        <div class="hamburger_nav">
-                            <nav class="hamburger_nav--items">
-                                <a href="#aboutMe" onclick="closeHamburger()">About</a>
-                                <a href="#portfolio" onclick="closeHamburger()">Project</a>
-                                <a href="#contact" onclick="on()">Contact</a>
-                            </nav>
-                        </div>
-                    </div> 
-                </header>
-               
-                <!-- <ul>
-                    <li><a href="#aboutMe">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#overlay" onclick="on()" >Contact</a></li>
-                </ul> -->
-                <div id="contact" >
-                    <div class="overlay_info">
-                       <img class="haw_pic" src="images/hawPic.jpg" alt="HawHaw">
-                       <i id="xMark" class="fa-solid fa-xmark" onclick="off()"></i>
-                       <div class="info">
-                            <p>Haw Haw Tan</p>
-                            <p>Feel free to contact me!</p>
-                            <div class="icon">
-                                <a href="mailto:thawhaw@gmail.com"><i class="fa-regular fa-envelope">:</i> thawhaw@gmail.com</a>
-                                <a href="https://www.linkedin.com/in/hawhawtan/"><i class="fa-brands fa-linkedin-in">:</i> www.linkedin.com/in/hawhawtan</a>
-                                <a href="https://github.com/HawHawTan"><i class="fa-brands fa-github">:</i> https://github.com/HawHawTan</a>
-                            </div>
-                        </div>    
-                    </div>          
+        <header id="header">
+            <div class="nav" id="nav">
+                <a class="hawhawLog" href="#intro"><img src="images/Haw Haw log.png"  alt="haw Haw Tan"></a>
+                <input id="toggle" type="checkbox"  onclick="check()"/>
+                <label class="hamburger" for="toggle" id="hamburger">
+                    <div class="hamburger_top"></div>
+                    <div class="hamburger_meat"></div>
+                    <div class="hamburger_bottom"></div>
+                </label>
+                <div class="hamburger_nav" id="hamburger_nav">
+                    <nav class="hamburger_nav--items" id="hamburger_nav--items">
+                        <a href="#aboutMe" onclick="closeHamburger()">About</a>
+                        <a href="#project" onclick="closeHamburger()">Project</a>
+                        <a href="#contact" onclick="on()">Contact</a>
+                    </nav>
                 </div>
-                    <div id="content" class="content">
-                        <!-- <h2> Haw Haw Tan</h2> -->
-                         <div class="bouncing-text">
-                            <div>H</div>
-                            <div>a</div>
-                            <div>w</div>
-                            <div>H</div>
-                            <div>a</div>
-                            <div>w</div>
-                            <div>T</div>
-                            <div>a</div>
-                            <div>n</div>
-                        </div>
-
+            </div> 
+        </header>
+        <div id="contact">
+            <div class="overlay_info">
+               <img class="haw_pic" src="images/hawPic.jpg" alt="HawHaw">
+               <i id="xMark" class="fa-solid fa-xmark" onclick="off()"></i>
+               <div class="info">
+                    <p>Haw Haw Tan</p>
+                    <p>Feel free to contact me!</p>
+                    <div class="icon">
+                        <a href="mailto:thawhaw@gmail.com"><i class="fa-regular fa-envelope">:</i> thawhaw@gmail.com</a>
+                        <a href="https://www.linkedin.com/in/hawhawtan/"><i class="fa-brands fa-linkedin-in">:</i> www.linkedin.com/in/hawhawtan</a>
+                        <a href="https://github.com/HawHawTan"><i class="fa-brands fa-github">:</i> https://github.com/HawHawTan</a>
+                    </div>
+                </div>    
+            </div>          
+        </div>
+        <section id="intro" class="intro">            
+                <div id="content" class="content">
+                    <h2>Haw Haw Tan</h2>
                         <div class="names">
                             <div class="verticalFlip">
                                 <span>React Native Developer</span>
                                 <span>Front-End Developer</span> 
                             </div>
                         </div>
-                        
                     </div>
             </section>
 
@@ -82,9 +64,9 @@
                 <div class=" hidden">
                     <h2>About Me</h2>
                     <p>
-                        Hello!  My name is Haw Haw Tan, I am currently taking a break from school to become a self-taught Frontend and React Native Developer based in Vancouver, British Columbia.
+                        Hello! My name is Haw Haw Tan, I am currently taking a break from school to become a self-taught front-end and React Native Developer based in Vancouver, British Columbia.
                         My break from school has allowed me to enroll in Udemy courses to enhance new techniques to provide the best user experience with smooth and responsive animation. 
-                        It is my goal as a developer, is to challenge myself to write code that is more efficient with the latest version. 
+                        It is my goal as a developer, to challenge myself to write code that is more efficient with the current version.
                     </p>
                 </div>
 
@@ -93,7 +75,7 @@
                     <div class="cards">
                         <div class="skillList">
                             <p>
-                                As I have progressed through my school years and Udemy courses, I have gained more experience with the basic frontend development languages:
+                                As I have progressed through my school years and Udemy courses, I have gained more experience with these basic front-end development languages:
                             </p>
                             <div class="list">
                                 <div><i class="fa-sharp fa-solid fa-arrow-right"></i> HTML</div>
@@ -108,7 +90,7 @@
 
                         <div class="skillList">
                             <p>
-                                During my internship with Guessfit, I had the opportunities to build their mobile app with: 
+                                During my internship with Guessfit, I had the opportunities to build their mobile app using: 
                             </p>
                             <div class="list">
                                 <div><i class="fa-sharp fa-solid fa-arrow-right"></i> React Native</div>
@@ -122,23 +104,25 @@
             </div>
         </section>
 
-        <section id="portfolio" class="project">
+        <section id="project" class="project">
             <div class="container-info">
                 <div class="hidden">
                     <h2>Project</h2>
-                    <div class="cards">
-                        <div class="project1" onclick="knowOrDont_on()">
-                           <img id="knowOrDont" class="knowOrDont" src="images/Know-or-Don't logo.jpg" alt="Know-or-Don't logo">
-                           <!-- <button class="details"> details</button> -->
-                            <p class="knowOrDont-details" id="knowOrDont-details" >
-                                <!-- <img id="knowOrDont" class="shrink-img" src="Know-or-Don't logo.jpg" alt="Know-or-Don't logo"> -->
+                    <div class="project1" onclick="knowOrDont_on()">
+                        <img id="knowOrDont" class="knowOrDont-img" src="images/Know-or-Don't logo.jpg" alt="Know-or-Don't logo">
+                    </div>
+                        <div id="knowOrDont-details" class="knowOrDont-cards">
+                            <img id="knowOrDont" class="knowOrDont-img-inside" src="images/Know-or-Don't logo.jpg" alt="Know-or-Don't logo">
+                            <p class="knowOrDont-details-text" >
                                 Know-or-Don’t is a concept of a note cards for students who want to study on the go. 
                                 It has a simple and minimalistic look that keep you focus on the heading. 
-                                It will prompt a question If you know or don’t to the topic. If you don't know, it'll come back and ask again.
-                               <span class="working">Work in process...</span>
+                                It will prompt a question, if you know the answer, simply press the "know" button which display the answer
+                                and move you on the next card. If you don't, pressing the "Don't" button will reveal the answer before moving the card
+                                to the end of the list, where it will eventually come up again. 
+                                <!-- If you don’t know, it will move to the end of the list and eventually ask you again. -->
+                               <span class="working">Work in progress...</span>
                             </p>
                         </div>
-                    </div>
                 </div>
             </div>
                 <div class="arrow hidden">

@@ -80,20 +80,6 @@
     }
 }
 
-@keyframes bouncing {
-    0%   { 
-        transform:  translateY(0); 
-    }
-
-    30%  { 
-        transform:  translateY(-25px);
-    }
-
-    50%  { 
-        transform:  translateY(-7px); 
-    }
-}
-
 @keyframes zoom-in-zoom-out{
     0% {
       opacity: 0;
@@ -125,14 +111,23 @@
 
 html{
     scroll-behavior: smooth;
-    height: 100vh;
+    /* height: 100vh; */
     margin: 0;
+    position: relative;
+    overflow-x: hidden;
 }
 
 body{
     margin: 0;
-    overflow-x: hidden;
     font-family: monospace;
+}
+
+.container{
+    /* background: linear-gradient(180deg, #efede1 10%, rgba(37,47,59,1) 90%);*/
+    /* background: linear-gradient(90deg, #141e30, #243b55); */
+    /* background: linear-gradient(to top, #16222a, #6ca0ba); */
+    /* background: linear-gradient(to top, #16222a, #557586 90%); */
+    background-color: #101010;
     
 }
 :root{
@@ -141,13 +136,17 @@ body{
     --load-link-time-delay: calc(var(--load-header-time) + 50ms);
     
     --color: rgb(41, 41, 41);
-    --color-white:#ecf0f1;
+    --color-white:#e8e8e4;
+    --color-blue: #6ca0ba;
 
     --nav-fontSize: 1rem;
-    --content-h2-fontSize: 10em;
-    --content-h3-fontSize: 2rem;
+    --content-h2-fontSize: 7em;
+    --content-h3-fontSize: 2em;
     --h2-fontSize: 2.4rem;
     --p-fontSize: 1.4em;
+    --width-0f-knowOrDont: 35%;
+    --mobile-fontSize: 14px;
+
 }
   
 .container > section {
@@ -155,10 +154,9 @@ body{
   }
 
 .intro{
-    position: relative;
     padding: 0 4rem;
     padding-bottom: 2rem;
-    background: linear-gradient(180deg, #efede1 10%, rgba(37,47,59,1)90%);
+    /* background: linear-gradient(180deg, #efede1 10%, rgba(37,47,59,1)90%); */
 }
 
 /* make it pop */
@@ -167,32 +165,46 @@ header{
     animation:load-header 1s ease-in;
     transform: translateY(-100%);
     animation-fill-mode: forwards;
-    position: relative;
+    position: sticky;
+    top: 0;
+    width: 100%;  
     
 }
 
-.mobile{
-    display: flex;
-    justify-content: flex-end;
-    height: 100%;
-    /* align-items: center; */
+header .hawhawLog{
+    /* margin-top: 1em; */
+    left: 0;
+    position: absolute;
+    margin-left: 4%;
+    border-radius: 20%;
+    border: 1px solid white;
+    z-index: 4;
+}
+
+header img{
+    width:  45px;
+    height: 45px;  
 }
 
 .hamburger{
-    z-index: 2; 
+    z-index: 4; 
     cursor: pointer;
+    padding-right: 4%;
+    right: 0;
+    position: absolute;
 }
 
 .hamburger div{
     width: 35px;
     height: 3px;
-    background-color: #303a45b3;
+    background-color: var(--color-white);
+    /* background-color: white; */
     margin-top: 10px;
     transition: all .5s ease-in-out;
 }
 
 .hamburger:hover div{
-    background-color: rgb(158, 179, 239);
+    background-color: var(--color-blue);
 }
 
 #toggle{
@@ -213,10 +225,9 @@ header{
 }
 
 #toggle:checked + .hamburger + .hamburger_nav{
-    right: -5em;
+    right: -1em;
     opacity: 0.8;
-    background-color:rgb(37, 47, 59,0.7);
-  
+    background-color:rgb(37, 47, 59,0.7); 
 }
 
 .hamburger_nav{
@@ -226,8 +237,9 @@ header{
     padding-right: 4em;
     opacity: 0;
     top: 0;
+    z-index: 0;
     right: -8em;
-    width: 100vw; 
+    width: 120%; 
     height: 100vh;
     transition: all 1s ease-in-out;
 }
@@ -255,7 +267,7 @@ header{
     content: "";
     display:block;
     height: 2px;
-    background-color: rgb(158, 179, 239);
+    background-color: var(--color-blue);
     transition: all 0.3s ease 0s;
     width: 0;
 }
@@ -271,7 +283,7 @@ header{
     height: 100%; 
     right: 0;
     bottom: 0;
-    background-color:rgb(37, 47, 59,0.7);
+    /* background-color:rgb(37, 47, 59,0.7); */
     opacity: 0;
     z-index: -1; 
     animation: pop-contact 2s ease-in-out forwards;
@@ -347,6 +359,7 @@ img{
 
 .content{ 
    position: absolute;
+   left: 20%;
    margin-top: 220px;
    animation: zoom-in-zoom-out 500ms ease-in var(--load-link-time-delay);
    opacity: 0;
@@ -354,63 +367,20 @@ img{
    animation-fill-mode: forwards;
 }
 
-.bouncing-text{
-    display: flex;
-}
 
-.bouncing-text div:nth-child(1) {
-    animation: bouncing 1.5s ease-in-out infinite;
-}
-
-.bouncing-text div:nth-child(2) {
-    animation: bouncing 1.5s ease-in-out infinite .1s;
-}
-
-.bouncing-text div:nth-child(3) {
-  
-    animation: bouncing 1.5s ease-in-out infinite .2s;
-}
-
-.bouncing-text div:nth-child(4) {
-    text-indent: 20px;
-    animation: bouncing 1.5s ease-in-out infinite .3s;
-}
-
-.bouncing-text div:nth-child(5){
-    animation: bouncing 1.5s ease-in-out infinite .4s;
-}
-
-.bouncing-text div:nth-child(6){
-    animation: bouncing 1.5s ease-in-out infinite .5s;
-}
-
-.bouncing-text div:nth-child(7){
-    text-indent: 20px;
-    animation: bouncing 1.5s ease-in-out infinite .6s;
-}
-
-.bouncing-text div:nth-child(8){
-
-    animation: bouncing 1.5s ease-in-out infinite .7s;
-}
-
-.bouncing-text div:nth-child(9){
-    animation: bouncing 1.5s ease-in-out infinite .8s;
-}
-
-   
-.content h2,.content h3
-{
+.content h2{
+    font-size: var(--content-h2-fontSize);   
+    /* color: var(--color-white); */
+    color: var(--color-blue);
+    margin: 0;
     text-shadow: 11px 14px 5px rgb(0 0 0 / 15%);
 } 
 
 .bouncing-text div{
-    color:var(--color);
     font-size: var(--content-h2-fontSize);
 }
 
 .names{  
-    /* display: flex; */
     color:var(--color);
     text-transform: uppercase;
     font-size: var(--content-h3-fontSize);
@@ -453,7 +423,7 @@ img{
 .aboutMe{
     display: flex;
     justify-content: center;
-    background-color :rgba(37,47,59,1); 
+    /* background-color :rgba(37,47,59,1);  */
 }
 
 .container-info{
@@ -462,9 +432,12 @@ img{
     width: 60%;
 }
 
+.aboutMe h2, .project h2{
+    color: var(--color-blue)
+}
+
 .aboutMe div{
-    color: #f3f3f2;
-    /* padding-top: 2em; */
+    color: var(--color-white);
 }
 
 .aboutMe .cards{
@@ -496,11 +469,11 @@ img{
 }
 
 .fa-arrow-right{
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .aboutMe .skillList{
-    border: 1px solid white;
+    border: 1px solid var(--color-white);
     transition: all .4s ease;
     border-radius: 20px;
     box-shadow: 20px 20px rgba(0,0,0,.15);
@@ -514,68 +487,74 @@ img{
     padding-top: 4em;
     display: flex;
     flex-direction: column;
-    position: relative;
-    align-items:center ;
-    background: linear-gradient(0deg, #efede1, rgb(37, 47, 59) 99%);
+    /* position: relative; */
+    align-items: center ; 
+    /* background: linear-gradient(0deg, #efede1, rgb(37, 47, 59) 99%); */
 }
 
-.project1{
-    display: flex;
-    flex-direction: row;
+.project div p{
+    color:var(--color-white);
+    width: 90%;
+    margin: auto;
+    padding-top: 1em;
 }
 
-.knowOrDont{
+.knowOrDont-img{
     margin: 0;
-    position: relative;
+    position: absolute;
     width: 400px;
     box-shadow: 20px 20px rgba(0,0,0,.15);
-    z-index: 1; 
+    z-index: 2; 
     cursor: pointer;
-    transition: all 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
-.knowOrDont:hover{
+.knowOrDont-img:hover{
     box-shadow: 20px 20px rgba(0,0,0,0);
     transform: translateY(9px);
     transition: all 0.5s ease-in-out ;
 }
 
 .shrink-img{
-    position: absolute;
-    width: 200px;
-    height: 125px;
-    transition: all 1s ease-in-out;
-    box-shadow: none;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    box-shadow: none; 
 }
 
-.knowOrDont-details{
+.knowOrDont-cards{
     position: absolute;
-    margin-top: 2em;
-    width: 35%;
-    border: 1px solid black;
+    margin-top: 1em;
+    /* width: var(--width-0f-knowOrDont); */
+    width: 400px;
+    border: 1px solid var(--color-white);
     box-shadow: 20px 20px rgb(0 0 0 / 15%);
-    padding: 2rem 2rem;
-    border-radius: 20px;
+    padding: 3em 1.5em;
+    border-radius: 40px;
 
     opacity: 0;
-    z-index: -1;
-    transform: translateY(-10%);
-    transition: all 1s ease-in-out;
-}
-.knowOrDont-details .working{
-    padding-top: 1em;
-    display: block;
+    z-index: 1;
+    transition: all 0.5s ease-in-out;
 }
 
-.knowOrDont-details span{
+.knowOrDont-img-inside{
+    display: flex;
+    width: 350px;
+    height: 200px
+}
+
+.working{
+    display: block;
+    padding-top: 2em;
+}
+
+.working{
+    float: right;
     color: #1d891d;
 }
 
-.move-down{
-    position: relative;
-    transform: translateY(30%);
+.show-details{
     opacity: 1;
-    transition: all 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 .arrow{
@@ -593,12 +572,13 @@ img{
     animation-play-state: paused;
 }
 .arrow i{
-    color: black;
+    color: var(--color-blue);
     font-size: 2rem;
 }
 
 footer{
     position: absolute;
+    color: var(--color-white);
     right: 0;
     left: 0;
     bottom: 0px;
@@ -623,13 +603,11 @@ footer{
 }
 
 @media (max-width: 1400px) {
-    
     .aboutMe .skillList {
         height: 400px;
-        width: 400px;
-        /* background-color: white; */
+        width: 60%;
     }
- 
+
      .aboutMe .cards{
         flex-direction: column;
         align-items: center;
@@ -638,22 +616,13 @@ footer{
 
 
 @media (min-width: 769px) and (max-width: 950px) {
-    html{
-        overflow-x: hidden;
-    }
     .container-info {    
         width: 70%;
     }
 
-    .hamburger_nav--items{
-        flex-direction: row;
-        width: 100%;
-        align-items: flex-start;
-    }
-
     .aboutMe .skillList {
         height: 400px;
-        width: 300px;
+        width: 80%;
     }
 
     .skillList .list div {
@@ -667,37 +636,31 @@ footer{
 }
  
 @media (min-width: 320px) and (max-width: 769px){
-    html{
-        overflow-x: hidden;
-    }
-
     .intro{
         /* overflow-x: hidden; */
         padding: 0 2rem;
         margin-bottom: 0;
     }
-
-    header{
-        z-index: 1;
+    header img{
+        width:  40px;
+        height: 40px;
     }
 
     ul li a{
         padding: 0;
         font-size: 16px;
     }
-    .bouncing-text > div{
-        position: relative;
-        z-index: 0;
+
+    .content h2{
+        font-size: 4em;
     }
-    .content div{
-        font-size: 2em;
-    }
+
     .names{
         height: 20px;
     }
 
     .verticalFlip span{
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     .overlay_info{
@@ -705,6 +668,7 @@ footer{
         height: 470px;;
         flex-direction: column;
     }
+
     .haw_pic{
         padding-top: 2em;
     }
@@ -722,7 +686,7 @@ footer{
     }
 
     .overlay_info .info{
-        font-size: 15px;
+        font-size: var(--mobile-fontSize);
         width: 85%;
         padding-right: 0;
         padding-bottom: 3em;
@@ -760,9 +724,10 @@ footer{
     .aboutMe div h2, .project div h2{
         font-size: 1.8rem;
     } 
-    .aboutMe div p{
-        font-size: 1rem;
-        margin-bottom: 0;
+
+    .aboutMe div p,.project div p {
+        font-size: var(--mobile-fontSize);
+        /* margin-bottom: 0; */
     } 
 
     .aboutMe div ul{
@@ -792,7 +757,7 @@ footer{
     }
 
     .skillList .list div{
-        font-size: 1.1em; 
+        font-size: var(--mobile-fontSize); 
         padding-bottom: 1.5em;
      }
 
@@ -800,14 +765,20 @@ footer{
         justify-content: center;
      }
 
-    .knowOrDont{
-        width: 100%;
-     }
-
-    .shrink-img{
-         width: 200px;
-         left: 0;
+    .knowOrDont-img{
+       width: 300px;
     }
+
+    .knowOrDont-cards{
+        width: 90%;
+    }
+
+    .knowOrDont-img-inside{
+        display: flex;
+        width: 250px;
+        height: 150px
+    }
+ 
 
     .knowOrDont-details{
         margin: 1em 0;

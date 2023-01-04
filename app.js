@@ -1,5 +1,6 @@
 "use strict"
 
+// study this
 const observer = new IntersectionObserver((lists) =>{
     lists.forEach((list) => {
      console.log(list);
@@ -12,7 +13,17 @@ const observer = new IntersectionObserver((lists) =>{
 });
 
 const hidden = document.querySelectorAll('.hidden');
-hidden.forEach((el) => observer.observe(el));
+hidden.forEach((element) => observer.observe(element));
+
+function check(){
+   let toggle = document.getElementById("toggle").checked;
+   document.getElementById("header").style.zIndex = "1";
+   if(!toggle){
+      document.getElementById("header").style.zIndex = "0";
+   }
+   // document.getElementById("project").style.zIndex = "-1";
+}
+
 
 function closeHamburger(){
    document.getElementById("toggle").checked = false;
@@ -39,8 +50,8 @@ function on() {
  }
 
  function knowOrDont_on() {
-    document.getElementById("knowOrDont-details").classList.toggle("move-down");
+    document.getElementById("knowOrDont-details").classList.toggle("show-details");
     document.getElementById("knowOrDont").classList.toggle("shrink-img");
     // document.getElementById("overlay").style.zIndex = "1";
  }
- 
+
