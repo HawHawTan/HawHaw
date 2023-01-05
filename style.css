@@ -82,17 +82,13 @@
 
 @keyframes zoom-in-zoom-out{
     0% {
-      opacity: 0;
-      transform: scale(1);
-    }
-    50% {
-      opacity: 0.5;
-      transform: scale(2.5);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
+        opacity: 0;
+        transform: scale(4);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
   }
 
 
@@ -299,7 +295,6 @@ header img{
     width: 750px;
     height: 500px;
     border-radius: 50px;
-    /* background-color:rgb(37, 47, 59,0.7); */
     background-color:rgb(37, 47, 59,0.9); 
     /* background: linear-gradient(360deg, #EFEDDB -138%, rgba(37,47,59,0.7)101%); */
 }
@@ -386,7 +381,7 @@ img{
 }
 
 .names{  
-    color:var(--color);
+    color: var(--color);
     text-transform: uppercase;
     font-size: var(--content-h3-fontSize);
     height: 40px;
@@ -492,7 +487,6 @@ img{
     padding-top: 4em;
     display: flex;
     flex-direction: column;
-    /* position: relative; */
     align-items: center ; 
     /* background: linear-gradient(0deg, #efede1, rgb(37, 47, 59) 99%); */
 }
@@ -500,45 +494,62 @@ img{
 .project div p{
     color:var(--color-white);
     width: 90%;
+    font-size: 16px;
     margin: auto;
-    padding-top: 1em;
+    padding-top: 20px;
+}
+
+.card{
+    width: 50%;
+}
+
+.card_content{
+    width: 15%;
+    position: relative;
+    padding: 0 150px;
+    padding-top: 300px;
+    transition: transform 2s;
+    transform-style: preserve-3d;
+}
+
+.card_turn{
+    transform: rotateY(.5turn);
+}
+
+.project1, .knowOrDont-cards{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* background: rgba(103, 102, 102, 1); */
+    backface-visibility: hidden;
+     transform-style: preserve-3d;
+    /* display: grid;
+    align-content: center; */
+}
+
+.project1{
+    transform: translateZ(5rem);
 }
 
 .knowOrDont-img{
-    margin: 0;
-    position: absolute;
     width: 400px;
-    box-shadow: 20px 20px rgba(0,0,0,.15);
     z-index: 2; 
     cursor: pointer;
-    transition: all 0.5s ease-in-out;
-}
-
-.knowOrDont-img:hover{
-    box-shadow: 20px 20px rgba(0,0,0,0);
-    transform: translateY(9px);
-    transition: all 0.5s ease-in-out ;
-}
-
-.shrink-img{
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
-    box-shadow: none; 
+    transition: all 0.5s ease-in-out;   
 }
 
 .knowOrDont-cards{
-    position: absolute;
-    margin-top: 1em;
-    /* width: var(--width-0f-knowOrDont); */
+    transform: rotateY(.5turn);
+    cursor: pointer;
     width: 400px;
+    /* background-color: rgba(103, 102, 102, 0.15); */
+    /* background: rgba(103, 102, 102, 1); */
     border: 1px solid var(--color-white);
-    box-shadow: 20px 20px rgb(0 0 0 / 15%);
-    padding: 3em 1.5em;
+    /* box-shadow: 20px 20px rgb(0 0 0 / 15%); */
+    /* padding: 1em 1em; */
     border-radius: 40px;
-
-    opacity: 0;
-    z-index: 1;
-    transition: all 0.5s ease-in-out;
 }
 
 .knowOrDont-img-inside{
@@ -549,7 +560,7 @@ img{
 
 .working{
     display: block;
-    padding-top: 2em;
+    padding-top: 10px;
 }
 
 .working{
@@ -640,15 +651,14 @@ footer{
     }
 }
  
-@media (min-width: 320px) and (max-width: 769px){
+@media (min-width: 390px) and (max-width: 769px){ 
     .intro{
-        /* overflow-x: hidden; */
         padding: 0 2rem;
         margin-bottom: 0;
     }
     header img{
-        width:  40px;
-        height: 40px;
+        width:  35px;
+        height: 35px;
     }
 
     ul li a{
@@ -700,7 +710,7 @@ footer{
 
     .overlay_info .info p:nth-child(1){
         font-size: 27px;
-         padding-top: 9px;
+        padding-top: 9px;
     }
 
     .overlay_info .icon{
@@ -722,7 +732,7 @@ footer{
     }
 
     .container-info{   
-        width: 80%;
+        width: 70%;
         /* padding-top: 4em; */
     }
 
@@ -764,11 +774,7 @@ footer{
     .skillList .list div{
         font-size: var(--mobile-fontSize); 
         padding-bottom: 1.5em;
-     }
-
-    .project1{
-        justify-content: center;
-     }
+    }
 
     .knowOrDont-img{
        width: 300px;
@@ -776,6 +782,7 @@ footer{
 
     .knowOrDont-cards{
         width: 90%;
+        margin-left: 30px;
     }
 
     .knowOrDont-img-inside{
@@ -783,7 +790,6 @@ footer{
         width: 250px;
         height: 150px
     }
- 
 
     .knowOrDont-details{
         margin: 1em 0;
@@ -796,7 +802,21 @@ footer{
      .arrow{
        bottom: 4rem;
     } 
+
+  
 }
+
+@media (min-width: 390px){
+    .content h2{
+        font-size: 3em;
+    }
+
+    .verticalFlip span{
+        font-size: 15px;
+    }
+}
+
+
 
 
 

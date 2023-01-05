@@ -21,12 +21,12 @@ function check(){
    if(!toggle){
       document.getElementById("header").style.zIndex = "0";
    }
-   // document.getElementById("project").style.zIndex = "-1";
 }
 
 
 function closeHamburger(){
    document.getElementById("toggle").checked = false;
+   document.getElementById("header").style.zIndex = "0";
 }
 
 function on() {
@@ -40,18 +40,15 @@ function on() {
    contact.style.animation = null; 
  }
  
- function off() {
+ function close_contact() {
    let contact = document.getElementById("contact");
    contact.style.transition = "all 1s ease-in-out";
    contact.style.opacity = "0";
    contact.style.zIndex = "-1";
- 
-
+   document.getElementById("header").style.zIndex = "0";
  }
 
  function knowOrDont_on() {
-    document.getElementById("knowOrDont-details").classList.toggle("show-details");
-    document.getElementById("knowOrDont").classList.toggle("shrink-img");
-    // document.getElementById("overlay").style.zIndex = "1";
+    document.getElementById("card_content").classList.toggle("card_turn");
  }
 

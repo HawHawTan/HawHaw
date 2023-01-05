@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/hawPic.jpg">
+    <link rel="icon" href="images/Haw Haw log.png">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/0b9937aaec.js" crossorigin="anonymous"></script>
     <script defer src="app.js"></script>
@@ -35,7 +35,7 @@
         <div id="contact">
             <div class="overlay_info">
                <img class="haw_pic" src="images/hawPic.jpg" alt="HawHaw">
-               <i id="xMark" class="fa-solid fa-xmark" onclick="off()"></i>
+               <i id="xMark" class="fa-solid fa-xmark" onclick="close_contact()"></i>
                <div class="info">
                     <p>Haw Haw Tan</p>
                     <p>Feel free to contact me!</p>
@@ -108,21 +108,25 @@
             <div class="container-info">
                 <div class="hidden">
                     <h2>Project</h2>
-                    <div class="project1" onclick="knowOrDont_on()">
-                        <img id="knowOrDont" class="knowOrDont-img" src="images/Know-or-Don't logo.jpg" alt="Know-or-Don't logo">
-                    </div>
-                        <div id="knowOrDont-details" class="knowOrDont-cards">
-                            <img id="knowOrDont" class="knowOrDont-img-inside" src="images/Know-or-Don't logo.jpg" alt="Know-or-Don't logo">
-                            <p class="knowOrDont-details-text" >
-                                Know-or-Don’t is a concept of a note cards for students who want to study on the go. 
-                                It has a simple and minimalistic look that keep you focus on the heading. 
-                                It will prompt a question, if you know the answer, simply press the "know" button which display the answer
-                                and move you on the next card. If you don't, pressing the "Don't" button will reveal the answer before moving the card
-                                to the end of the list, where it will eventually come up again. 
-                                <!-- If you don’t know, it will move to the end of the list and eventually ask you again. -->
-                               <span class="working">Work in progress...</span>
-                            </p>
+                    <div class="card">
+                        <div class="card_content" id="card_content">
+                            <div class="project1" onclick="knowOrDont_on()">
+                                <img id="knowOrDont" class="knowOrDont-img" src="images/Know-or-Don't logo.jpg" alt="Know-or-Don't logo">
+                            </div>
+                            <div id="knowOrDont-details" class="knowOrDont-cards" onclick="knowOrDont_on()">
+                                <!-- <img id="knowOrDont" class="knowOrDont-img-inside" src="images/Know-or-Don't logo.jpg" alt="Know-or-Don't logo"> -->
+                                <p class="knowOrDont-details-text">
+                                    Know-or-Don’t is a concept of a note cards for students who want to study on the go. 
+                                    It has a simple and minimalistic look that keep you focus on the heading. 
+                                    It will prompt a question, if you know the answer, simply press the "know" button which display the answer
+                                    and move you on the next card. If you don't, pressing the "Don't" button will reveal the answer before moving the card
+                                    to the end of the list, where it will eventually come up again. 
+                                    <!-- If you don’t know, it will move to the end of the list and eventually ask you again. -->
+                                    <span class="working">Work in progress...</span>
+                                </p>
+                            </div>
                         </div>
+                    </div>
                 </div>
             </div>
                 <div class="arrow hidden">
