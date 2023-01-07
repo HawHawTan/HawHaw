@@ -193,7 +193,6 @@ header img{
     width: 35px;
     height: 3px;
     background-color: var(--color-white);
-    /* background-color: white; */
     margin-top: 10px;
     transition: all .5s ease-in-out;
 }
@@ -286,7 +285,6 @@ header img{
     height: 100%; 
     right: 0;
     bottom: 0;
-    /* background-color:rgb(37, 47, 59,0.7); */
     opacity: 0;
     z-index: -1; 
     animation: pop-contact 2s ease-in-out forwards;
@@ -303,7 +301,6 @@ header img{
     height: 500px;
     border-radius: 50px;
     background-color:rgb(37, 47, 59,0.9); 
-    /* background: linear-gradient(360deg, #EFEDDB -138%, rgba(37,47,59,0.7)101%); */
 }
 
 img{
@@ -460,7 +457,8 @@ img{
 }
 
 .aboutMe div p, .project div p {
-    font-size: var(--p-fontSize); 
+    font-size: var(--p-fontSize);
+    color: var(--color-white);
 }
 
 .skillList .list{
@@ -499,7 +497,6 @@ img{
 }
 
 .project div p{
-    color:var(--color-white);
     width: 90%;
     font-size: 16px;
     margin: auto;
@@ -551,6 +548,7 @@ img{
     transform: rotateY(.5turn);
     cursor: pointer;
     width: 400px;
+    height: 105%;
     /* background-color: rgba(103, 102, 102, 0.15); */
     border: 1px solid var(--color-white);
     border-radius: 40px;
@@ -656,10 +654,6 @@ footer{
 }
  
 @media screen and (max-width: 769px){ 
-
-    html,body{
-        overflow-x: hidden;
-    }
     .intro{
         padding: 0 2rem;
         margin-bottom: 0;
@@ -674,8 +668,12 @@ footer{
         font-size: 16px;
     }
 
+    .content{
+       left: 10%;
+    }
+
     .content h2{
-        font-size: 3em;
+        font-size: 4em;
     }
 
     .names{
