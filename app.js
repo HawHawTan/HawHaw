@@ -1,19 +1,19 @@
 "use strict"
 
-// study this
 const observer = new IntersectionObserver((lists) =>{
     lists.forEach((list) => {
      console.log(list);
-     if(list.isIntersecting){
-        list.target.classList.add('show');
-     } else{
-        list.target.classList.remove('show');
-     }
+     list.target.classList.toggle("show", list.isIntersecting)
+     if(list.isIntersecting) observer.unobserve(list.target);
     });
+},
+{
+   rootMargin: '-200px'
 });
 
 const hidden = document.querySelectorAll('.hidden');
 hidden.forEach((element) => observer.observe(element));
+
 
 function check(){
    let toggle = document.getElementById("toggle").checked;
