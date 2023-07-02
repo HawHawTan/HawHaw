@@ -147,8 +147,10 @@ body {
 
 header {
   padding-top: 35px;
-  animation: load-header 1s ease-in;
-  transform: translateY(-100%);
+  animation: load-header 500ms ease-in forwards;
+  /* transform: translateY(-100%); */
+  opacity: 0;
+  transform: scale(1);
   animation-fill-mode: forwards;
   position: sticky;
   top: 0;
@@ -216,33 +218,6 @@ header img {
 #toggle:not(:checked) + .hamburger + .hamburger_nav > .hamburger_nav--items a {
   pointer-events: none;
 }
-
-.nav-menu{
-  /* position: absolute; */
-  /* display: flex; */
-  /* justify-content: flex-end; */
-  width: 30%;
-}
-
-.nav-items{
- 
-  display: flex;
-  justify-content: space-around;
-  
-  align-items: center;
-}
-
-/* .nav-items a{
-  color: var(--color-white);
-  font-family: monospace;
-  font-size: 1.5em;
-  text-decoration: none;
-  letter-spacing: 3px;
-  transition: all 0.4s ease-in-out;
-  display: inline-block;
-} */
-
-
 
 
 .hamburger_nav {
@@ -531,19 +506,6 @@ header img {
   width: 50%;
 }
 
-@keyframes newPage {
-  0% {
-    transform: scale(0.4);
-  }
-
-  50% {
-    transform: scale(1.2);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
 
 .card_content {
   /* width: 15%; */
@@ -579,19 +541,17 @@ header img {
   z-index: 2;
   cursor: pointer;
   transition: all 0.5s ease-in-out; 
+  filter: invert(1);
 }
 
 .knowOrDont-img:hover{
-  /* background-color: green; */
-  
-  transform: translateY(-10px);
-  transition: all 0.5s ease-in-out; 
+  transform: translateY(-20px);
+  transition: transform 0.5s ease-in-out; 
 }
 
 .removePic{
   display: none;
 }
-
 
 .knowOrDont-img_pop {
   transition: transform 2.5s ease-in-out;
@@ -599,22 +559,6 @@ header img {
   background-color: var(--color-darkBlack);
   
 }
-
-/* .knowOrDont-cards {
-  transform: rotateY(0.5turn);
-  cursor: pointer;
-  width: 400px;
-  height: 105%;
-  background-color: rgba(103, 102, 102, 0.15);
-  border: 1px solid var(--color-white);
-  border-radius: 40px;
-} */
-
-/* .knowOrDont-img-inside {
-  display: flex;
-  width: 350px;
-  height: 200px;
-} */
 
 .show-details {
   opacity: 1;
@@ -700,11 +644,16 @@ footer {
   }
 }
 
+
 @media screen and (max-width: 769px) {
   .intro {
     padding: 0 2rem;
-    margin-bottom: 0;
   }
+
+  .container section {
+    min-height: 80vh;
+  }
+
   header img {
     width: 35px;
     height: 35px;

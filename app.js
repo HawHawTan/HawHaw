@@ -48,10 +48,17 @@ function close_contact() {
   document.getElementById("header").style.zIndex = "0";
 }
 
+// remove the name of knowOrDont
 function knowOrDont_on() {
   document.querySelector(".knowOrDont-img").classList.add("removePic");
   document.querySelector(".project").classList.add("knowOrDont-img_pop")
   setTimeout(()=>{
     window.location.href = "https://hawhawtan.github.io/Dad-Jokes/";
   }, 800)
+  
+  setTimeout(()=>{
+    document.querySelector(".knowOrDont-img").classList.add("removePic");
+    document.querySelector(".project").classList.add("knowOrDont-img_pop")
+  }, 800)
+  
 }
