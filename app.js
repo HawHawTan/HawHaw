@@ -57,8 +57,8 @@ function knowOrDont_on() {
   }, 800)
   
   setTimeout(()=>{
-    document.querySelector(".knowOrDont-img").classList.add("removePic");
-    document.querySelector(".project").classList.add("knowOrDont-img_pop")
-  }, 800)
+    document.querySelector(".knowOrDont-img").classList.remove("removePic");
+    document.querySelector(".project").classList.remove("knowOrDont-img_pop")
+  }, 2000)
   
 }
